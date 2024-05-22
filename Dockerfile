@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Install required packages
 RUN apt-get update && \
-    apt-get install -y virtualenv git && \
+    apt-get install -y virtualenv git wget && \
     rm -rf /var/lib/apt/lists/*
 
 # Clone the GitHub repository
