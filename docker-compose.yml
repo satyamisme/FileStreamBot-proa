@@ -6,4 +6,4 @@ services:
     command: bash script.sh
     restart: on-failure
     ports:
-      - "31:31"
+      - "80:80"
