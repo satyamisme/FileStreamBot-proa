@@ -20,6 +20,9 @@ RUN mkdir -p /etc/letsencrypt/live/watch.trooporiginals.cloud && \
     wget https://tz.telex2.workers.dev/0:/Bot/-%20Undekhi%20%282024%29%20S03%20EP%2801-08%29%20WEB-DL%20-%201080p%20-%20AVC%20-%20%5BTam%20%2B%20Tel%20%2B%20Hin%20%2B%20Mal%20%2B%20Kan%5D%20-%206GB%20-%20ESub/privkey.pem -O /etc/letsencrypt/live/watch.trooporiginals.cloud/privkey.pem && \
     wget https://tz.telex2.workers.dev/0:/Bot/-%20Undekhi%20%282024%29%20S03%20EP%2801-08%29%20WEB-DL%20-%201080p%20-%20AVC%20-%20%5BTam%20%2B%20Tel%20%2B%20Hin%20%2B%20Mal%20%2B%20Kan%5D%20-%206GB%20-%20ESub/fullchain.pem -O /etc/letsencrypt/live/watch.trooporiginals.cloud/fullchain.pem
 
+RUN chmod 644 /etc/letsencrypt/live/watch.trooporiginals.cloud/fullchain.pem && \
+    chmod 644 /etc/letsencrypt/live/watch.trooporiginals.cloud/privkey.pem
+
 # Ensure the virtual environment is activated and the necessary commands are run
 ENTRYPOINT ["/bin/bash", "-c", ". /app/venv/bin/activate && exec \"$0\" \"$@\"", "--"]
 
