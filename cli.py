@@ -5,7 +5,7 @@ init(convert=True)
 print(Fore.GREEN + "  ______ _ _       _____ _                            _____              _____ _      _____\n |  ____(_) |     / ____| |                          |  __ \            / ____| |    |_   _|\n | |__   _| | ___| (___ | |_ _ __ ___  __ _ _ __ ___ | |__) | __ ___   | |    | |      | |  \n |  __| | | |/ _ \\___  \| __| '__/ _ \/ _` | '_ ` _ \|  ___/ '__/  _ \ | |    | |      | |  \n | |    | | |  __/____) | |_| | |  __/ (_| | | | | | | |   | | | (_) | | |____| |____ _| |_ \n |_|    |_|_|\___|_____/ \__|_|  \___|\__,_|_| |_| |_|_|   |_|  \___/   \_____|______|_____|\n" + Style.RESET_ALL)
 print (Fore.BLUE + "Welcome to Adarsh's CLI, an easier way to deploy your bot!\nLet's get started!\n\n" + Style.RESET_ALL)
 
-alredy = input("Do you alredy have .env file? (y/n): ",'n')
+alredy = "y"
 if alredy == "n":
     api_id = input("Enter your API ID: ")
     while not re.match("[0-9]+", api_id):
