@@ -13,9 +13,8 @@ RUN apt-get update && \
 RUN git clone https://github.com/JohnWickKeanue/FileStreamBot-pro . 
 
 # Set up and activate the virtual environment, then install the dependencies
-RUN virtualenv -p /usr/bin/python3 venv && \
-    . /app/venv/bin/activate && \
-    pip install --no-cache-dir -r requirements.txt
+RUN virtualenv -p /usr/bin/python3 venv
+RUN . /app/venv/bin/activate && pip install --no-cache-dir -r requirements.txt && pip install colorama
 
 # Run the initial commands
 CMD ["bash", "-c", ". /app/venv/bin/activate && python3 cli.py && python3 -m Adarsh"]
