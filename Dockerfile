@@ -1,1 +1,1 @@
-CMD ["bash", "start.sh"]
+CMD ["bash", "script.sh"]
