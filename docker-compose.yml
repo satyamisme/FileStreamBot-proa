@@ -6,3 +6,8 @@ services:
     restart: on-failure
     ports:
       - "80:80"
+    volumes:
+      - .:/app
+    command: bash -c "python3 cli.py && python3 -m Adarsh"
+
+ 
