@@ -17,11 +17,5 @@ RUN virtualenv -p /usr/bin/python3 venv && \
     . /app/venv/bin/activate && \
     pip install --no-cache-dir -r requirements.txt
 
-# Copy the script to the working directory (if the script is part of the repo, this step can be omitted)
-# COPY script.sh /app/
-
-# Make the script executable
-RUN chmod +x script.sh
-
-# Run the script
-CMD ["bash", "script.sh"]
+# Run the initial commands
+CMD ["bash", "-c", ". /app/venv/bin/activate && python3 cli.py && python3 -m Adarsh"]
