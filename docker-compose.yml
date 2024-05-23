@@ -15,7 +15,7 @@ services:
       - "443:443"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./Certificate.crt:/etc/letsencrypt/Pertificate.crt
+      - ./Certificate.cer:/etc/letsencrypt/Pertificate.cer
       - ./Private.key:/etc/letsencrypt/Private.key
       - certs:/etc/letsencrypt
       - certs-data:/data/letsencrypt
