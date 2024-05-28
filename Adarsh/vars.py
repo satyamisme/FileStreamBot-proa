@@ -31,7 +31,7 @@ class Var(object):
         ON_HEROKU = False
     ON_HEROKU = False
     FQDN = (getenv('FQDN', 'watch.trooporiginals.cloud')) if not ON_HEROKU or getenv('FQDN','82.165.5.85') else APP_NAME+'.herokuapp.com'
-    HAS_SSL=bool(getenv('HAS_SSL',False))
+    HAS_SSL=bool(getenv('HAS_SSL',True))
     if HAS_SSL:
         URL = "https://{}/".format(FQDN)
     else:
